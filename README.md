@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+## Mapas geologicos de Costa Rica
 
-You can use the [editor on GitHub](https://github.com/maxgav13/MapasGeoCR/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Los mapas se encuentran en formato de Teselas (MBTiles), por lo que pueden ser accedidos por medio del paquete [`leaflet`](https://rstudio.github.io/leaflet), para mapas interactivos.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Ejemplo
 
-### Markdown
+```{r}
+library(leaflet)
+library(leafem)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+fuente = '<a href="http://geologia.ucr.ac.cr">Escuela Centroamericana de Geologia, UCR</a>'
+tilesCabuya = "http://maxgav13.github.io/MapasGeoCR/cabuya/{z}/{x}/{y}.png"
+leaflet() %>% 
+  addTiles(group='OSM') %>% 
+  addTiles(urlTemplate = tilesCabuya,
+           attribution = paste0('Fuente: ', fuente),
+           group = 'Mapas Geo', 
+           layerId = 'Cabuya') %>% 
+  addLayersControl(baseGroups = c('OSM','Mapas Geo'),
+                   position = 'topleft') %>% 
+  addMouseCoordinates() %>% 
+  addScaleBar(position = 'bottomleft',
+              options = scaleBarOptions(imperial = F))
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/maxgav13/MapasGeoCR/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
