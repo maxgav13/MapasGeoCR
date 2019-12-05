@@ -30,3 +30,7 @@ leaflet() %>%
 Imagen de ambos mapas
 
 ![](images/ejemplo.png)
+
+Imagen del mapa Cabuya con mayor zoom (detalle)
+
+![](images/ejemplo_cabuya_z14.png)
