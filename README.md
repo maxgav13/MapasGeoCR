@@ -1,6 +1,6 @@
 ## Mapas geologicos de Costa Rica
 
-Los mapas se encuentran en formato de Teselas (MBTiles), por lo que pueden ser accedidos por medio del paquete [`leaflet`](https://rstudio.github.io/leaflet), para mapas interactivos.
+Los mapas se encuentran en formato de Teselas (MBTiles), por lo que pueden ser accedidos por medio del paquete [`leaflet`](https://rstudio.github.io/leaflet), para mapas interactivos. Los mapas han sido generados por personal de la [Escuela Centroamericana de Geologia] (https:geologia.ucr.ac.cr) y del Centro de Investigacion en Ciencias Geologicas
 
 ### Ejemplo
 
