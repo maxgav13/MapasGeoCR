@@ -29,4 +29,4 @@ leaflet() %>%
 ```
 Imagen de ambos mapas
 
-[]('images/ejemplo.png')
+![](images/ejemplo.png)
