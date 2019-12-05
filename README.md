@@ -10,16 +10,23 @@ library(leafem)
 
 fuente = '<a href="http://geologia.ucr.ac.cr">Escuela Centroamericana de Geologia, UCR</a>'
 tilesCabuya = "http://maxgav13.github.io/MapasGeoCR/cabuya/{z}/{x}/{y}.png"
+tilesRioArio = "http://maxgav13.github.io/MapasGeoCR/rioario/{z}/{x}/{y}.png"
 leaflet() %>% 
   addTiles(group='OSM') %>% 
   addTiles(urlTemplate = tilesCabuya,
            attribution = paste0('Fuente: ', fuente),
            group = 'Mapas Geo', 
            layerId = 'Cabuya') %>% 
+  addTiles(urlTemplate = tilesRioArio,
+           attribution = paste0('Fuente: ', fuente),
+           group = 'Mapas Geo', 
+           layerId = 'Rio Ario') %>% 
   addLayersControl(baseGroups = c('OSM','Mapas Geo'),
                    position = 'topleft') %>% 
   addMouseCoordinates() %>% 
   addScaleBar(position = 'bottomleft',
               options = scaleBarOptions(imperial = F))
 ```
+Imagen de ambos mapas
 
+[]('images/ejemplo.png')
