@@ -37,5 +37,5 @@ Imagen del mapa Cabuya con mayor zoom (detalle)
 
 Version interactiva
 
-<html src="mapas_tiles.html" style="display: block; margin: auto;" />
+<html "mapas_tiles.html"/>
 
