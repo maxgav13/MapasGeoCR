@@ -34,3 +34,8 @@ Imagen de ambos mapas
 Imagen del mapa Cabuya con mayor zoom (detalle)
 
 ![](images/ejemplo_cabuya_z14.png)
+
+Version interactiva
+
+<img src="mapas_tiles.html" style="display: block; margin: auto;" />
+
